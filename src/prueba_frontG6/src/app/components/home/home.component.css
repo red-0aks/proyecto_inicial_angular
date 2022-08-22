@@ -1,0 +1,53 @@
+.carousel-inner{
+    min-width: fit-content;
+    width: 65%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+   
+    border: 3px solid white;
+    box-shadow: inset 0 0 20px violet, 0 0 30px violet;
+    border-radius: 200px;
+    text-align: center;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.bordes-transparentes{	
+    border: 3px solid white;
+    box-shadow: inset 0 0 20px violet, 0 0 25px violet;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.img-juegos {
+    width: 100%;
+    height: 350px;
+    margin:auto;
+}
+.card-title{
+    height: 50px;
+    
+    
+}
+.card{
+    border: 3px solid white;
+    box-shadow: inset 0 0 20px orange, 0 0 25px orange;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.carrito{
+    border: 3px solid white;
+    box-shadow: inset 0 0 20px green, 0 0 25px green;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}

@@ -1,0 +1,25 @@
+<div class="container mt-6 mb-6 fondo">
+    <div class="row justify-content-center my-5">
+        <div class="col-6">
+            <div class="row" *ngIf="user.picture">
+                <div class="col text-center mb-2">
+                    <img [src]="user.picture" alt="Logo" class="rounded-circle w-25 bordes-transparentes-imagen">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-2 bordes-transparentes-datos">
+                    <h3>Nickname:</h3>
+                    <h3>{{user.nickname}}</h3>   
+                </div>
+                <div class="col mb-2 bordes-transparentes-datos">
+                    <h3>Email:</h3>
+                    <h3>{{user.email}}</h3>  
+                </div>
+                <div class="col mb-2 bordes-transparentes-datos">
+                    <h3>Actualizado el:</h3>
+                    <h3>{{user.updated_at | date: 'dd-MM-yyyy hh:mm:ss'}}</h3>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.fondo{
+    border: 5px solid white;
+    box-shadow: inset 0 0 10px red, 0 0 100px red;
+    border-radius: 60px;
+    margin: auto;
+    margin-top: 80px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 0, 255, 0.4);
+}
+.bordes-transparentes-imagen{	
+    border: 0px solid white;
+    box-shadow: inset 0 0 50px blue, 0 0 50px blue;
+    border-radius: 60px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.bordes-transparentes-datos{	
+    border: 2px solid white;
+    box-shadow: inset 0 0 10px yellow, 0 0 50px yellow;
+    border-radius: 20px;
+    margin: auto;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 255, 0, 0.2);
+}

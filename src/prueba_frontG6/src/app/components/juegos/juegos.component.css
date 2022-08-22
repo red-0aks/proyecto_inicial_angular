@@ -1,0 +1,25 @@
+.img-juegos {
+    width: 100px;
+    height: 150px;
+}
+.bordes-transparentes-cabecera{	
+    border: 3px solid white;
+    box-shadow: inset 0 0 20px blueviolet, 0 0 25px blueviolet;
+    border-radius: 60px;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    }
+.bordes-transparentes{	
+        border: 3px solid white;
+        box-shadow: inset 0 0 20px violet, 0 0 25px violet;
+        border-radius: 60px;
+        margin: auto;
+        text-align: center;
+        color: white;
+        padding: 30px;
+        background-color: rgb(255, 255, 255);
+}
+    

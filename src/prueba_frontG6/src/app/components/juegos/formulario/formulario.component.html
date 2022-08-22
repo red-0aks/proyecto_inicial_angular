@@ -1,0 +1,152 @@
+<div class="container mt-4">
+    <form [formGroup]="form">
+        <div class="card bordes-transparentes">
+            <div class="card-header">
+                <h3 class="card-title ">{{titulo}}</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group row mb-3">
+                    <label for="nombre" class="col-form-label col-md-2"><b>Nombre:</b></label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" formControlName="nombre" [(ngModel)]="juego.nombre"
+                            [ngClass]="{'is-invalid':submitted && f['nombre'].errors}">
+                        <div *ngIf="submitted && f['nombre'].errors" class="invalid-feedback">
+                            <span class="badge bg-danger" role="alert" *ngIf="f['nombre'].errors['required']">Nombre es
+                                requerido.</span>
+                            <span class="badge bg-danger" role="alert" *ngIf="f['nombre'].errors['minlength']">Nombre
+                                debe tener al menos 2 caracteres.</span>
+                            <span class="badge bg-danger" role="alert" *ngIf="f['nombre'].errors['maxlength']">Nombre no
+                                debe exceder los 50 caracteres.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="nombre" class="col-form-label col-md-2"><b>Descripcion:</b></label>
+                    <div class="col-md-10">
+                        <textarea type="text" class="form-control" formControlName="descripcion" style="height: 100px"
+                            [(ngModel)]="juego.descripcion"
+                            [ngClass]="{'is-invalid':submitted && f['descripcion'].errors}"></textarea>
+                        <div *ngIf="submitted && f['descripcion'].errors" class="invalid-feedback">
+                            <span class="badge bg-danger" role="alert"
+                                *ngIf="f['descripcion'].errors['required']">Descripcion es requerido.</span>
+                            <span class="badge bg-danger" role="alert"
+                                *ngIf="f['descripcion'].errors['minlength']">Descripcion debe tener al menos 2
+                                caracteres.</span>
+                            <span class="badge bg-danger" role="alert"
+                                *ngIf="f['descripcion'].errors['maxlength']">Descripcion no debe exceder los 300
+                                caracteres.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group row mb-3">
+                    <label for="categoria" class="col-form-label col-sm-2"><b>Categoria:</b></label>
+                    <div class="col-sm-10">
+                        <div class="form-check-inline col-mb-2">
+                            <input class="form-check-input" formControlName="categoria" [(ngModel)]="juego.categoria" value="Accion" type="radio" name="categoria" id="Accion">
+                            <label class="form-check-label" for="Accion">
+                                Accion
+                            </label>
+                        </div>
+                        <div class="form-check-inline col-mb-2">
+                            <input class="form-check-input" formControlName="categoria" [(ngModel)]="juego.categoria" value="Aventuras" type="radio" name="categoria" id="Aventuras">
+                            <label class="form-check-label" for="Aventuras">
+                                Aventuras
+                            </label>
+                        </div>
+                        <div class="form-check-inline col-mb-2">
+                            <input class="form-check-input" formControlName="categoria" [(ngModel)]="juego.categoria" value="Carreras" type="radio" name="categoria" id="Carreras">
+                            <label class="form-check-label" for="Carreras">
+                                Carreras
+                            </label>
+                        </div>
+                        <div class="form-check-inline col-mb-2">
+                            <input class="form-check-input" formControlName="categoria" [(ngModel)]="juego.categoria" value="Deportes" type="radio" name="categoria" id="Deportes">
+                            <label class="form-check-label" for="Deportes">
+                                Deportes
+                            </label>
+                        </div>
+                        <div class="form-check-inline col-mb-2">
+                            <input class="form-check-input" formControlName="categoria" [(ngModel)]="juego.categoria" value="Estrategia" type="radio" name="categoria" id="Estrategia">
+                            <label class="form-check-label" for="Estrategia">
+                                Estrategia
+                            </label>
+                        </div>
+                        <div class="form-check-inline col-mb-2">
+                            <input class="form-check-input" formControlName="categoria" [(ngModel)]="juego.categoria" value="FPS" type="radio" name="categoria" id="FPS">
+                            <label class="form-check-label" for="FPS">
+                                FPS
+                            </label>
+                        </div>  
+                        <div class="form-check-inline col-mb-2">
+                            <input class="form-check-input" formControlName="categoria" [(ngModel)]="juego.categoria" value="Lucha" type="radio" name="categoria" id="Lucha">
+                            <label class="form-check-label" for="Lucha">
+                                Lucha
+                            </label>
+                        </div>
+                        <div class="form-check-inline col-mb-2">
+                            <input class="form-check-input" formControlName="categoria" [(ngModel)]="juego.categoria" value="Simulacion" type="radio" name="categoria" id="Simulacion">
+                            <label class="form-check-label" for="Simulacion">
+                                Simulacion
+                            </label>
+                        </div>                     
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="precio" class="col-form-label col-md-2"><b>Precio:</b></label>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control" formControlName="precio" [(ngModel)]="juego.precio"
+                            [ngClass]="{'is-invalid':submitted && f['precio'].errors}">
+                        <div *ngIf="submitted && f['precio'].errors" class="invalid-feedback">
+                            <span class="badge bg-danger" role="alert" *ngIf="f['precio'].errors['required']">Precio es
+                                requerido.</span>
+                            <span class="badge bg-danger" role="alert" *ngIf="f['precio'].errors['max']">Precio no
+                                debe exceder los 8 caracteres.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="fechaEstreno" class="col-form-label col-md-2"><b>Fecha de Estreno:</b></label>
+                    <div class="col-md-10">
+                        <input type="date" class="form-control" formControlName="fechaEstreno" [(ngModel)]="juego.fechaEstreno"
+                            [ngClass]="{'is-invalid':submitted && f['fechaEstreno'].errors}">
+                        <div *ngIf="submitted && f['fechaEstreno'].errors" class="invalid-feedback">
+                            <span class="badge bg-danger" role="alert" *ngIf="f['fechaEstreno'].errors['required']">Fecha de Estreno es
+                                requerido.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="imagen" class="col-form-label col-md-2"><b>Url de la Imagen:</b></label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" formControlName="imagen" [(ngModel)]="juego.imagen"
+                            [ngClass]="{'is-invalid':submitted && f['imagen'].errors}">
+                        <div *ngIf="submitted && f['imagen'].errors" class="invalid-feedback">
+                            <span class="badge bg-danger" role="alert" *ngIf="f['imagen'].errors['required']">Imagen es
+                                requerido.</span>
+                            <span class="badge bg-danger" role="alert" *ngIf="f['imagen'].errors['minlength']">Imagen
+                                debe tener al menos 2 caracteres.</span>
+                            <span class="badge bg-danger" role="alert" *ngIf="f['imagen'].errors['maxlength']">Imagen no
+                                debe exceder los 300 caracteres.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <div class="form-group row text-center">
+                    <div class="col">
+                        <button class="btn btn-lg btn-primary me-4" (click)="onSubmit()"
+                            *ngIf="!juego.id else elseBlock" role="button">Crear</button>
+                        <ng-template #elseBlock>
+                            <button class="btn btn-lg  btn-primary me-4" (click)="onSubmitUpdate()" role="button">Editar</button>
+                        </ng-template>
+                        <button type="button" (click)="onReset()"
+                            class="btn btn-lg me-4 btn-warning">Limpiar</button>
+                        <button type="button" class="btn btn-lg  btn-success" routerLink="/juegos">Volver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
